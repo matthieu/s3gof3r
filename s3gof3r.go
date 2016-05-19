@@ -143,7 +143,7 @@ func (b *Bucket) PutWriter(path string, h http.Header, c *Config) (w io.WriteClo
 func (b *Bucket) url(bPath string, c *Config) (*url.URL, error) {
 
 	// parse versionID parameter from path, if included
-	// See https://github.com/rlmcpherson/s3gof3r/issues/84 for rationale
+	// See https://github.com/matthieu/s3gof3r/issues/84 for rationale
 	purl, err := url.Parse(bPath)
 	if err != nil {
 		return nil, err
